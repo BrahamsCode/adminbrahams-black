@@ -59,9 +59,9 @@
             <tr>
               <td class="text-muted" style="font-size:.8rem">{{ $user->id }}</td>
               <td>
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex align-items-center gap-3">
                   <div class="rounded-circle d-flex align-items-center justify-content-center font-weight-bold text-white"
-                       style="background:linear-gradient(87deg,#7928ca,#ff0080);width:34px;height:34px;font-size:.8rem;flex-shrink:0">
+                       style="background:linear-gradient(87deg,#7928ca,#ff0080);width:34px;height:34px;font-size:.8rem;flex-shrink:0;margin-right:.75rem">
                     {{ strtoupper(substr($user->name,0,1)) }}
                   </div>
                   <div>
@@ -79,15 +79,15 @@
               </td>
               <td class="text-center text-muted" style="font-size:.8rem">{{ $user->created_at->format('d/m/Y') }}</td>
               <td class="text-right">
-                <div class="d-flex justify-content-end gap-2">
-                  <a href="{{ route('admin.users.edit', $user) }}" class="btn btn-link btn-warning btn-sm p-0 mb-0" title="Editar">
+                <div class="d-flex justify-content-end align-items-center gap-3">
+                  <a href="{{ route('admin.users.edit', $user) }}" class="btn btn-link btn-warning btn-sm p-1 mb-0" title="Editar">
                     <i class="tim-icons icon-pencil"></i>
                   </a>
                   @if($user->id !== auth()->id())
                   <form action="{{ route('admin.users.destroy', $user) }}" method="POST"
                         onsubmit="return confirm('¿Eliminar a {{ addslashes($user->name) }}?')">
                     @csrf @method('DELETE')
-                    <button type="submit" class="btn btn-link btn-danger btn-sm p-0 mb-0" title="Eliminar">
+                    <button type="submit" class="btn btn-link btn-danger btn-sm p-1 mb-0" title="Eliminar">
                       <i class="tim-icons icon-simple-remove"></i>
                     </button>
                   </form>

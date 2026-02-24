@@ -60,6 +60,43 @@
 
     /* Stat card number */
     .stat-number { font-size: 1.6rem; font-weight: 700; }
+
+    /* Gap utilities (Bootstrap 4 no las trae de serie) */
+    .gap-1 { gap: .25rem !important; }
+    .gap-2 { gap: .5rem  !important; }
+    .gap-3 { gap: 1rem   !important; }
+    .gap-4 { gap: 1.5rem !important; }
+
+    /* Paginación — dark theme */
+    .pagination { flex-wrap: wrap; gap: 4px; }
+    .pagination .page-link {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.15);
+      color: rgba(255,255,255,.7);
+      border-radius: .4285rem !important;
+      padding: .38rem .7rem;
+      font-size: .82rem;
+      transition: background .2s, border-color .2s;
+    }
+    .pagination .page-link:hover {
+      background: rgba(255,255,255,.15);
+      border-color: rgba(255,255,255,.3);
+      color: #fff;
+    }
+    .pagination .page-item.active .page-link {
+      background: linear-gradient(87deg,#7928ca,#ff0080);
+      border-color: transparent;
+      color: #fff;
+    }
+    .pagination .page-item.disabled .page-link {
+      background: rgba(255,255,255,.04);
+      border-color: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.28);
+      cursor: default;
+    }
+    /* Eliminar bordes de esquinas extra que Bootstrap 4 pone */
+    .pagination .page-item:first-child .page-link,
+    .pagination .page-item:last-child  .page-link { border-radius: .4285rem !important; }
   </style>
 </head>
 

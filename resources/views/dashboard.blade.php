@@ -68,9 +68,9 @@
                 @foreach(\App\Models\User::latest()->take(5)->get() as $u)
                 <tr>
                   <td>
-                    <div class="d-flex align-items-center gap-2">
+                    <div class="d-flex align-items-center gap-3">
                       <div class="rounded-circle d-flex align-items-center justify-content-center font-weight-bold text-white"
-                           style="background:linear-gradient(87deg,#7928ca,#ff0080);width:36px;height:36px;font-size:.85rem;flex-shrink:0">
+                           style="background:linear-gradient(87deg,#7928ca,#ff0080);width:36px;height:36px;font-size:.85rem;flex-shrink:0;margin-right:.75rem">
                         {{ strtoupper(substr($u->name,0,1)) }}
                       </div>
                       <div>
